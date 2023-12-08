@@ -13,3 +13,4 @@ public:
 		Interpolation* interp // Si ca vaut zero on utilise la methode par defaut
 		);
 };
+//commentaire
