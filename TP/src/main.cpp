@@ -33,7 +33,7 @@ int main() {
 
 	cout << "---------------------Interp Default---------------------" << endl;
 
-	u = r.getThetaMax(f, fRef, fDef, &sim, &interp);
+	u = r.getThetaMax(f, fRef, fDef, &sim, &interpDef);
 
 
 	return 0;
