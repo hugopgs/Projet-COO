@@ -12,7 +12,7 @@ int main() {
 	Recalage r;
 	string f="floating.pgm", fRef="reference.pgm", fppv = "imageDefPpv.pgm"; fDef = "imageDef.pgm"
 	InterpolationPpv interpppv;
-    InterpolationDefault interpDef;
+    	InterpolationDefault interpDef;
 	Deformation d;
 	SimilariteDefault sim;
 
