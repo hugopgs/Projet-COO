@@ -130,25 +130,3 @@ VecDoub Recalage::getThetaMax(string f, string fRef, string fwrite, Similarite* 
 	return Thetamax;
 }
 
-VecDoub Recalage::getThetaMax(string f, string fRef, Similarite* sim, Interpolation* interp) {
-	string fwrite = "imageDef.pgm";
-	return this->getThetaMax(f, fRef, fwrite, sim, interp);
-}
-
-VecDoub Recalage::getThetaMax(string f, string fRef, Interpolation* interp) {
-	string fwrite = "imageDef.pgm";
-	return this->getThetaMax(f, fRef, fwrite, 0, interp);
-}
-
-VecDoub Recalage::getThetaMax(string f, string fRef, Similarite* sim) {
-	string fwrite = "imageDef.pgm";
-	return this->getThetaMax(f, fRef, fwrite, sim, 0);
-}
-
-VecDoub Recalage::getThetaMax(string f, string fRef, string fwrite, Similarite* sim) {
-	return this->getThetaMax(f, fRef, fwrite, sim, 0);
-}
-
-VecDoub Recalage::getThetaMax(string f, string fRef, string fwrite, Interpolation* interp) {
-	return this->getThetaMax(f, fRef, fwrite, 0, interp);
-}
