@@ -120,11 +120,8 @@ VecDoub Recalage::getThetaMax(string f, string fRef, string fwrite, Similarite* 
 	NRmatrix<double> imageDef(I.ncols(), I.nrows());
 	NRmatrix<bool> imageBin(I.ncols(), I.nrows());
 	def.getDeformation(I, THETA, imageBin, imageDef, interp);
-	if (sim = 0)
-		cout << "Similarité pour ce Thetamax : " << sim->getSimilarite(I, imageDef, imageBin) << endl;
-	else {
-		SimilariteDefault sim;
-		cout << "Similarité pour ce Thetamax : " << sim.getSimilarite(I, imageDef, imageBin) << endl;
+	cout << "Similarité pour ce Thetamax : " << sim->getSimilarite(I, imageDef, imageBin) << endl;
+	
 	}
 	this->construireFichier(fwrite, imageDef); // on écrit l'image dans un fichier
 	return Thetamax;
