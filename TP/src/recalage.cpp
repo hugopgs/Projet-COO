@@ -18,9 +18,8 @@ NRmatrix<double> Recalage::lireImage(const string& nomFichier) {
 	ifstream lecture(nomFichier); //on ouvre le fichier en lecture
 	if (!lecture.fail()) {
 		
-		unsigned int U;
+		unsigned int U, i, j ;
 		char s[2];
-		unsigned int i, j;
 		lecture >> s; //on lit le premier caractère "P2"
 		lecture >> i; //on lit la largeur de l'image
 		lecture >> j; //on lit la hauteur de l'image
@@ -33,9 +32,6 @@ NRmatrix<double> Recalage::lireImage(const string& nomFichier) {
 		cout << "Ouverture du fichier " << nomFichier << " reussie" << endl; //on affiche un message de confirmation
 		return image;
 	} else {
-		// NRmatrix<double> image(0, 0); 
-		// cout << "Erreur lors de l'ouverture du fichier " << nomFichier << endl;
-		// return image;
 		throw invalid_argument("Erreur lors de l'ouverture du fichier " + nomFichier);
 	}
 }
@@ -63,7 +59,7 @@ void Recalage::construireFichier(const string& nomFichier, const NRmatrix<double
 }
 
 void Recalage::construireFichier(const string& nomFichier, const NRmatrix<bool> image) const {
-	// ecrire une image depuis une matrice dans le fichier dont le nom est passé en entrée 
+	// ecrire une image noir et blanc depuis une matrice (binaire) dans le fichier dont le nom est passé en entrée 
 	ofstream flux(nomFichier);
 	if (flux.fail()) {
 		cout << "Erreur lors de l'ouverture du fichier " << nomFichier << endl;
@@ -92,7 +88,7 @@ VecDoub Recalage::getThetaMax(string f, string fRef, string fwrite, Similarite* 
 	Cout cout_(Iref, I, sim, interp);
 	Amoeba amoeba(0.01);
 
-	VecDoub ystart(3); // vecteur de départ
+	VecDoub ystart(3); // vecteur de départ (THETA initial)
 	ystart[0]=0;
 	ystart[1]=0;
 	ystart[2]=0;
