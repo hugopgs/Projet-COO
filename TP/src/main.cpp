@@ -1,8 +1,18 @@
+#pragma once //Permet d'éviter d'inclure plusieurs fois un même fichier
+
 #include <stdio.h>
-#include <chrono>
-#include "Recalage.h"
-#include "Deformation.h"
+#include <stdlib.h>
+#include <string.h>
+
 #include "InterpolationPpv.h"
+#include "InterpolationDefault.h"
+#include "SimilariteDefault.h"
+#include "SimilariteMutualInformation.h
+#include "Similarite.h"
+#include "Interpolation.h"
+#include "nr3.h"
+#include "amoeba.h"
+#include "Cout.h"
 
 using namespace std;
 
